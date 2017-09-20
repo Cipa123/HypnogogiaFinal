@@ -1,4 +1,3 @@
-
 import java.awt.Rectangle;
 import java.awt.geom.Point2D;
 
@@ -18,6 +17,9 @@ public class Player
  private int inDreamHealth;
   
   //int coordinates of the the edges of the player model
+private int startingPosX;
+private int startingPosY;
+ 
 
  private Point2D playerPositionTopLeft;
  private Point2D playerPositionTopRight;
@@ -41,7 +43,7 @@ public class Player
 	  
   }
   
-  public Player (int lucidity, int panic, int amtMare, int amtStatic, int amtUpper) 
+  public Player (int lucidity, int panic, int amtMare, int amtStatic, int amtUpper, int startXd, int startYd) 
   {
 	  
 	  
@@ -50,15 +52,17 @@ public class Player
 	  this.amtMare = amtMare;
 	  this.amtStatic = amtStatic;
 	  this.amtUpper = amtUpper;
-
+	  this.startingPosX = startXd;
+	  this.startingPosY = startYd;
 	  
 
-	 this.playerTestModel.setBounds(0,0,100,200);
+	 this.playerTestModel.setBounds(startXd,startYd,100,200);
+	
 	 
-	 this.playerPositionTopLeft.setLocation(0, 0);
-	 this.playerPositionTopRight.setLocation(100, 0);
-	 this.playerPositionBottomLeft.setLocation(0, 200);
-	 this.playerPositionBottomRight.setLocation(100, 200);
+	 this.playerPositionTopLeft.setLocation(startXd, startYd);
+	 this.playerPositionTopRight.setLocation(startXd+100, startYd);
+	 this.playerPositionBottomLeft.setLocation(startXd, startYd+200);
+	 this.playerPositionBottomRight.setLocation(startXd+100, startYd+200);
 	  
 	  
 	  
@@ -67,6 +71,22 @@ public class Player
   }
   
   //varibales for player position and bounds********************************************************************
+
+  public int getStartingPosX() {
+ 	return startingPosX;
+ }
+
+ public void setStartingPosX(int startingPosX) {
+ 	this.startingPosX = startingPosX;
+ }
+
+ public int getStartingPosY() {
+ 	return startingPosY;
+ }
+
+ public void setStartingPosY(int startingPosY) {
+ 	this.startingPosY = startingPosY;
+ }
   public Point2D getPlayerPositionTopLeft() 
   {
   	return playerPositionTopLeft;
