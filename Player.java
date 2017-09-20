@@ -1,27 +1,40 @@
 
+import java.awt.Rectangle;
+import java.awt.geom.Point2D;
+
 public class Player
 {
   
-  private int lucidity;
-  private int panic;
-  private int amtMare;
-  private int amtStatic;
-  private int amtUpper;
-  private int level;
-  private int mareXP;
-  private int upperXP;
-  private int staticXP;
-  private int Health;
-  private int inDreamHealth;
+ private int lucidity;
+ private int panic;
+ private int amtMare;
+ private int amtStatic;
+ private int amtUpper;
+ private int level;
+ private int mareXP;
+ private int upperXP;
+ private int staticXP;
+ private int Health;
+ private int inDreamHealth;
   
-  private Boolean activeMenu;
-  private Boolean inLabratory;
-  private Boolean isAwake;
-  private Boolean playerLeft;
-  private Boolean playerRight;
-  private Boolean playerUp;
-  private Boolean playerDown;
+  //int coordinates of the the edges of the player model
+
+ private Point2D playerPositionTopLeft;
+ private Point2D playerPositionTopRight;
+ private Point2D playerPositionBottomLeft;
+ private Point2D playerPositionBottomRight;
   
+ private Rectangle playerTestModel;
+  
+ private Boolean activeMenu;
+ private Boolean inLabratory;
+ private Boolean isAwake;
+ private Boolean playerLeft;
+ private Boolean playerRight;
+ private Boolean playerUp;
+ private Boolean playerDown;
+  
+ 
   
   public Player ()
   {
@@ -31,13 +44,21 @@ public class Player
   public Player (int lucidity, int panic, int amtMare, int amtStatic, int amtUpper) 
   {
 	  
+	  
 	  this.lucidity = lucidity;
 	  this.panic = panic;
 	  this.amtMare = amtMare;
 	  this.amtStatic = amtStatic;
 	  this.amtUpper = amtUpper;
+
 	  
-	  
+
+	 this.playerTestModel.setBounds(0,0,100,200);
+	 
+	 this.playerPositionTopLeft.setLocation(0, 0);
+	 this.playerPositionTopRight.setLocation(100, 0);
+	 this.playerPositionBottomLeft.setLocation(0, 200);
+	 this.playerPositionBottomRight.setLocation(100, 200);
 	  
 	  
 	  
@@ -45,20 +66,60 @@ public class Player
 	  
   }
   
+  //varibales for player position and bounds********************************************************************
+  public Point2D getPlayerPositionTopLeft() 
+  {
+  	return playerPositionTopLeft;
+  }
+
+  public void setPlayerPositionTopLeft(Point2D playerPositionTopLeft) 
+  {
+  	this.playerPositionTopLeft = playerPositionTopLeft;
+  }
+
+  public Point2D getPlayerPositionTopRight()
+  {
+  	return playerPositionTopRight;
+  }
+
+  public void setPlayerPositionTopRight(Point2D playerPositionTopRight)
+  {
+  	this.playerPositionTopRight = playerPositionTopRight;
+  }
+
+  public Point2D getPlayerPositionBottomLeft()
+  {
+  	return playerPositionBottomLeft;
+  }
+
+  public void setPlayerPositionBottomLeft(Point2D playerPositionBottomLeft)
+  {
+  	this.playerPositionBottomLeft = playerPositionBottomLeft;
+  }
+
+  public Point2D getPlayerPositionBottomRight()
+  {
+  	return playerPositionBottomRight;
+  }
+
+  public void setPlayerPositionBottomRight(Point2D playerPositionBottomRight)
+  {
+  	this.playerPositionBottomRight = playerPositionBottomRight;
+  }
+
+  public Rectangle getPlayerTestModel()
+  {
+  	return playerTestModel;
+  }
+
+  public void setPlayerTestModel(Rectangle playerTestModel)
+  {
+  	this.playerTestModel = playerTestModel;
+  }
+ 
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  	
-  
-  	public int getLucidity() 
+//variables for player stats***********************************************************************************************
+	public int getLucidity() 
 	{
 		return lucidity;
 	}
@@ -248,4 +309,3 @@ public class Player
 	}
   
 }
-
