@@ -17,8 +17,7 @@ public class Player
  private int inDreamHealth;
   
   //int coordinates of the the edges of the player model
-private int startingPosX;
-private int startingPosY;
+
  
 
  private Point2D playerPositionTopLeft;
@@ -43,7 +42,7 @@ private int startingPosY;
 	  
   }
   
-  public Player (int lucidity, int panic, int amtMare, int amtStatic, int amtUpper, int startXd, int startYd) 
+  public Player (int lucidity, int panic, int amtMare, int amtStatic, int amtUpper) 
   {
 	  
 	  
@@ -52,17 +51,16 @@ private int startingPosY;
 	  this.amtMare = amtMare;
 	  this.amtStatic = amtStatic;
 	  this.amtUpper = amtUpper;
-	  this.startingPosX = startXd;
-	  this.startingPosY = startYd;
+
 	  
 
-	 this.playerTestModel.setBounds(startXd,startYd,100,200);
+	 this.playerTestModel.setBounds(0,0,100,200);
 	
 	 
-	 this.playerPositionTopLeft.setLocation(startXd, startYd);
-	 this.playerPositionTopRight.setLocation(startXd+100, startYd);
-	 this.playerPositionBottomLeft.setLocation(startXd, startYd+200);
-	 this.playerPositionBottomRight.setLocation(startXd+100, startYd+200);
+	 this.playerPositionTopLeft.setLocation(0, 0);
+	 this.playerPositionTopRight.setLocation(100, 0);
+	 this.playerPositionBottomLeft.setLocation(0, 200);
+	 this.playerPositionBottomRight.setLocation(100, 200);
 	  
 	  
 	  
@@ -72,70 +70,57 @@ private int startingPosY;
   
   //varibales for player position and bounds********************************************************************
 
-  public int getStartingPosX() {
- 	return startingPosX;
- }
-
- public void setStartingPosX(int startingPosX) {
- 	this.startingPosX = startingPosX;
- }
-
- public int getStartingPosY() {
- 	return startingPosY;
- }
-
- public void setStartingPosY(int startingPosY) {
- 	this.startingPosY = startingPosY;
- }
-  public Point2D getPlayerPositionTopLeft() 
-  {
-  	return playerPositionTopLeft;
-  }
-
-  public void setPlayerPositionTopLeft(Point2D playerPositionTopLeft) 
-  {
-  	this.playerPositionTopLeft = playerPositionTopLeft;
-  }
-
-  public Point2D getPlayerPositionTopRight()
-  {
-  	return playerPositionTopRight;
-  }
-
-  public void setPlayerPositionTopRight(Point2D playerPositionTopRight)
-  {
-  	this.playerPositionTopRight = playerPositionTopRight;
-  }
-
-  public Point2D getPlayerPositionBottomLeft()
-  {
-  	return playerPositionBottomLeft;
-  }
-
-  public void setPlayerPositionBottomLeft(Point2D playerPositionBottomLeft)
-  {
-  	this.playerPositionBottomLeft = playerPositionBottomLeft;
-  }
-
-  public Point2D getPlayerPositionBottomRight()
-  {
-  	return playerPositionBottomRight;
-  }
-
-  public void setPlayerPositionBottomRight(Point2D playerPositionBottomRight)
-  {
-  	this.playerPositionBottomRight = playerPositionBottomRight;
-  }
-
-  public Rectangle getPlayerTestModel()
-  {
-  	return playerTestModel;
-  }
-
-  public void setPlayerTestModel(Rectangle playerTestModel)
-  {
-  	this.playerTestModel = playerTestModel;
-  }
+ 
+	 
+	  public Point2D getPlayerPositionTopLeft() 
+	  {
+	  	return playerPositionTopLeft;
+	  }
+	
+	  public void setPlayerPositionTopLeft(int x, int y) 
+	  {
+	  	 (this.playerPositionTopLeft).setLocation(x,y);
+	  }
+	
+	  public Point2D getPlayerPositionTopRight()
+	  {
+	  	return playerPositionTopRight;
+	  }
+	
+	  public void setPlayerPositionTopRight(int x, int y)
+	  {
+		  (this.playerPositionTopRight).setLocation(x,y);
+	  }
+	
+	  public Point2D getPlayerPositionBottomLeft()
+	  {
+	  	return playerPositionBottomLeft;
+	  }
+	
+	  public void setPlayerPositionBottomLeft(int x, int y)
+	  {
+		  (this.playerPositionBottomLeft).setLocation(x,y);
+	  }
+	
+	  public Point2D getPlayerPositionBottomRight()
+	  {
+	  	return playerPositionBottomRight;
+	  }
+	
+	  public void setPlayerPositionBottomRight(int x, int y)
+	  {
+		  (this.playerPositionBottomRight).setLocation(x,y);
+	  }
+	
+	  public Rectangle getPlayerTestModel()
+	  {
+	  	return playerTestModel;
+	  }
+	
+	  public void setPlayerTestModel(int x, int y)
+	  {
+	  	this.playerTestModel.setLocation(x,y);
+	  }
  
   
 //variables for player stats***********************************************************************************************
