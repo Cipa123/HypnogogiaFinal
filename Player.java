@@ -1,5 +1,12 @@
+import java.awt.Image;
+import java.awt.Point;
 import java.awt.Rectangle;
-import java.awt.geom.Point2D;
+
+import java.io.File;
+import java.io.IOException;
+
+
+import javax.imageio.ImageIO;
 
 public class Player
 {
@@ -15,15 +22,17 @@ public class Player
  private int staticXP;
  private int Health;
  private int inDreamHealth;
+ 
+ private Image playerUpImage;
   
   //int coordinates of the the edges of the player model
 
  
 
- private Point2D playerPositionTopLeft;
- private Point2D playerPositionTopRight;
- private Point2D playerPositionBottomLeft;
- private Point2D playerPositionBottomRight;
+ private Point playerPositionTopLeft;
+ private Point  playerPositionTopRight;
+ private Point  playerPositionBottomLeft;
+ private Point playerPositionBottomRight;
   
  private Rectangle playerTestModel;
   
@@ -42,7 +51,7 @@ public class Player
 	  
   }
   
-  public Player (int lucidity, int panic, int amtMare, int amtStatic, int amtUpper) 
+  public Player (int lucidity, int panic, int amtMare, int amtStatic, int amtUpper) throws IOException 
   {
 	  
 	  
@@ -53,15 +62,17 @@ public class Player
 	  this.amtUpper = amtUpper;
 
 	  
-
+	 playerTestModel = new Rectangle(100,200);
 	 this.playerTestModel.setBounds(0,0,100,200);
 	
 	 
-	 this.playerPositionTopLeft.setLocation(0, 0);
-	 this.playerPositionTopRight.setLocation(100, 0);
-	 this.playerPositionBottomLeft.setLocation(0, 200);
-	 this.playerPositionBottomRight.setLocation(100, 200);
-	  
+	 playerPositionTopLeft= new Point(0,0);
+	 playerPositionTopRight= new Point(100, 0);
+	 playerPositionBottomLeft= new Point(0, 200);
+	 playerPositionBottomRight= new Point(100, 200);
+	 
+	 playerUpImage = null;
+	 playerUpImage = ImageIO.read(new File("C:/Users/mykolas/workspace/HYpnogogiaFinal/src/playerup.png"));
 	  
 	  
 	  
@@ -72,7 +83,7 @@ public class Player
 
  
 	 
-	  public Point2D getPlayerPositionTopLeft() 
+	  public Point getPlayerPositionTopLeft() 
 	  {
 	  	return playerPositionTopLeft;
 	  }
@@ -82,7 +93,7 @@ public class Player
 	  	 (this.playerPositionTopLeft).setLocation(x,y);
 	  }
 	
-	  public Point2D getPlayerPositionTopRight()
+	  public Point getPlayerPositionTopRight()
 	  {
 	  	return playerPositionTopRight;
 	  }
@@ -92,7 +103,7 @@ public class Player
 		  (this.playerPositionTopRight).setLocation(x,y);
 	  }
 	
-	  public Point2D getPlayerPositionBottomLeft()
+	  public Point getPlayerPositionBottomLeft()
 	  {
 	  	return playerPositionBottomLeft;
 	  }
@@ -102,7 +113,7 @@ public class Player
 		  (this.playerPositionBottomLeft).setLocation(x,y);
 	  }
 	
-	  public Point2D getPlayerPositionBottomRight()
+	  public Point getPlayerPositionBottomRight()
 	  {
 	  	return playerPositionBottomRight;
 	  }
@@ -312,5 +323,14 @@ public class Player
 	{
 		this.playerDown = playerDown;
 	}
-  
+
+	public Image getPlayerUpImage()
+	{
+		return playerUpImage;
+	}
+
+	public void setPlayerUpImage(Image img)
+	{
+		this.playerUpImage = img;
+	}
 }
