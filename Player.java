@@ -63,7 +63,8 @@ public class Player
 
 	  
 	 playerTestModel = new Rectangle(100,200);
-	 this.playerTestModel.setBounds(0,0,100,200);
+	 
+	 playerTestModel.setBounds(0,0,100,200);
 	
 	 
 	 playerPositionTopLeft= new Point(0,0);
@@ -71,7 +72,7 @@ public class Player
 	 playerPositionBottomLeft= new Point(0, 200);
 	 playerPositionBottomRight= new Point(100, 200);
 	 
-	 playerUpImage = null;
+	 playerUpImage = null; 
 	 playerUpImage = ImageIO.read(new File("C:/Users/mykolas/workspace/HYpnogogiaFinal/src/playerup.png"));
 	  
 	  
