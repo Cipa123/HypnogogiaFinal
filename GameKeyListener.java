@@ -12,11 +12,14 @@ public class GameKeyListener implements KeyListener
 	{
 		game = a;
 		keysDown = new ArrayList<Integer>();
+		
 	}
+	
+	
 	@Override
 	public void keyPressed(KeyEvent e)
 	{
-		if(e.getKeyCode() == 27 )
+		if(e.getKeyCode() == 27 )//escape
 		{
 			game.setVisible(false);
 			game.dispose();
@@ -27,6 +30,7 @@ public class GameKeyListener implements KeyListener
 		}
 	}
 
+	
 	@Override
 	public void keyReleased(KeyEvent arg0) {
 		// TODO Auto-generated method stub
@@ -35,7 +39,7 @@ public class GameKeyListener implements KeyListener
 
 	@Override
 	public void keyTyped(KeyEvent arg0) {
-		// TODO Ato-generated method stub
+		// TODO Auto-generated method stub
 		
 	}
 
