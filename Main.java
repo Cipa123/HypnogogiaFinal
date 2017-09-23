@@ -7,8 +7,11 @@ public class Main
 
 	public static void main(String[] args) throws IOException
 	{
-		player = new Player(10,10, 10, 10,10);
+		
+		player = new Player(10,10, 10, 10,10); //just for testing memes
+		
 		game = new GameFrame(player);
+		
 		GameKeyListener listener = new GameKeyListener(game);
 		game.addKeyListener(listener);
 		
