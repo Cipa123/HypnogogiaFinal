@@ -2,17 +2,17 @@ public class Airborn extends Enemy
 {
 	public Airborn(int h, int baseAttack)
 	{
-		this.setHealth(h);
-		this.setAlive(true);
-		this.setIsMoving(true);
-		this.setSawPlayer(false);
-		this.setBaseAttackDamage(baseAttack);
+		setHealth(h);
+		setAlive(true);
+		setIsMoving(true);
+		setSawPlayer(false);
+		setBaseAttackDamage(baseAttack);
 	}
 	
 	public void die()
 	{
 		//will do more stuff of course
-		this.setSawPlayer(false);
+		setAlive(false);
 	}
 
 	@Override
