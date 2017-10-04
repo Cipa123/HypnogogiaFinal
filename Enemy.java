@@ -1,5 +1,5 @@
 
-public abstract class Enemy implements movable
+public abstract class Enemy implements Movable
 {
 	private int baseAttackDamage;
 

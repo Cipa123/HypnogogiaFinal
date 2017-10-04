@@ -16,7 +16,6 @@ public class GameKeyListener implements KeyListener
 	}
 	
 	
-	@Override
 	public void keyPressed(KeyEvent e)
 	{
 		if(e.getKeyCode() == 27 )//escape
@@ -31,13 +30,11 @@ public class GameKeyListener implements KeyListener
 	}
 
 	
-	@Override
 	public void keyReleased(KeyEvent arg0) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void keyTyped(KeyEvent arg0) {
 		// TODO Auto-generated method stub
 		

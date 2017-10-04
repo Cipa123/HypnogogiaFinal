@@ -31,7 +31,6 @@ public class BareBonesKeyListener extends Applet implements KeyListener{
 		g2.fill(rect);
 		setBackground(Color.cyan); 
 	}
-	@Override
 	public void keyPressed(KeyEvent e) {
 		
 		if(!keysDown.contains(e.getKeyCode()))
@@ -67,7 +66,6 @@ public class BareBonesKeyListener extends Applet implements KeyListener{
 			x -= 2;
 	    rect.setLocation(x,y);
 	}
-	@Override
 	public void keyReleased(KeyEvent e) {
 		if(e.getKeyCode()==KeyEvent.VK_SPACE)
 		{
@@ -79,7 +77,6 @@ public class BareBonesKeyListener extends Applet implements KeyListener{
 	keysDown.remove(new Integer (e.getKeyCode()));
 	
 	}
-	@Override
 	public void keyTyped(KeyEvent e) {
 		
 	}

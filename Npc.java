@@ -1,5 +1,5 @@
 
-public abstract class Npc implements movable
+public abstract class Npc implements Movable
 {
 	
 	
