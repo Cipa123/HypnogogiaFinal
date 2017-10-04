@@ -73,8 +73,7 @@ public class Player
 	 playerPositionBottomRight= new Point(100, 200);
 	 
 	 playerUpImage = null; 
-	 playerUpImage = ImageIO.read(new File("C:/Users/mykolas/workspace/HYpnogogiaFinal/src/playerup.png"));
-	  
+	 playerUpImage = ImageIO.read(new File("C:/Users/GogolPoe/git/HypnogogiaFinal/imagesForGame/playerup.png"));
 	  
 	  
 	  

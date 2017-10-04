@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class BareBonesKeyListener extends Applet implements KeyListener{
 
 	/**
-	 * 
+	 * cool
 	 */
 	private static final long serialVersionUID = 1L;
 	private Rectangle rect;

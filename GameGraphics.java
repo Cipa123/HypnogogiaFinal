@@ -19,7 +19,7 @@ public class GameGraphics
 		
 		
 		player = p;
-		g.drawImage(player.getPlayerUpImage(), 100, 200, null);
+		g.drawImage(player.getPlayerUpImage(),(int)player.getPlayerPositionTopRight().getX(),(int)player.getPlayerPositionBottomRight().getY(), null);
 	}
 	
 
