@@ -15,41 +15,6 @@ public class GameKeyListener implements KeyListener
 		
 	}
 	
-	
-	public void Exit(KeyEvent e)
-	{
-		
-	}
-	public void Up(KeyEvent e)
-	{
-
-	}
-	public void Down(KeyEvent e)
-	{
-
-	}
-	public void Right(KeyEvent e)
-	{
-
-	}
-	public void Left(KeyEvent e)
-	{
-		
-	}
-
-
-	
-	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
 		if(e.getKeyCode() == 27 )//escape
@@ -79,5 +44,17 @@ public class GameKeyListener implements KeyListener
 			keysDown.add(new Integer(e.getKeyCode()));
 		}
 	}
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	
 
 }
